@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const userRoutes = require("./routes/index");
+const itemsRoutes = require("./routes/index");
 
 
 const app = express();
@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(userRoutes);
+app.use(itemsRoutes);
 
 app.get('/', (request, response) => { 
     response.send("start from /user")
